@@ -75,7 +75,7 @@ const Header = () => {
           </ul>
         </nav>
       </header>
-      <div className="pt-[5rem] sm:pt-[5rem] bg-transparent relative md:pt-[7rem]" />
+      <div className="bg-transparent relative pt-[7rem]" />
     </>
   );
 };

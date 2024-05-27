@@ -25,9 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={karla.className}>
         <Header />
-        <main className="flex-1  h-full">
-          {children}
-        </main>
+        <main className="flex-1 h-full">{children}</main>
       </body>
     </html>
   );

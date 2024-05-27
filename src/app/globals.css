@@ -8,7 +8,6 @@
 
 :root {
   --text-color: "#ffff";
-
 }
 
 * {
@@ -31,7 +30,6 @@ button {
   @apply outline-none;
 }
 
-
 .fi {
   @apply flex h-fit w-fit;
 }
@@ -40,7 +38,7 @@ button {
   @apply px-4 sm:px-8 md:px-12;
 } */
 
-.container{
+.container {
   @apply mx-auto px-4;
 }
 
@@ -70,7 +68,7 @@ button {
   @apply py-2 px-4 rounded-lg transition-all;
 }
 
-.btn-sm{
+.btn-sm {
   @apply py-1 px-3 rounded-lg transition-all;
 }
 
@@ -98,7 +96,10 @@ button {
   @apply btn-sm hover:text-white text-blue-500 border border-blue-500 hover:bg-blue-500;
 }
 
-.dual-color-green, .dual-color-blue, .dual-color-yellow, .dual-color-red {
+.dual-color-green,
+.dual-color-blue,
+.dual-color-yellow,
+.dual-color-red {
   @apply relative;
 }
 
@@ -174,40 +175,39 @@ button {
   height: 0;
 }
 
-.feature-1-bg{
+.feature-1-bg {
   @apply relative;
 }
-.feature-1-bg::before{
-  content: '';
+.feature-1-bg::before {
+  content: "";
   background: url("https://unfluke.in/static/media/dot5.0fabd35a.svg");
   @apply absolute -top-6 -left-6 w-[5rem] h-[5rem] -z-[1];
 }
 
-.feature-1-bg::after{
-  content: '';
+.feature-1-bg::after {
+  content: "";
   background: url("https://unfluke.in/static/media/dot2.8fbdbfb9.svg");
   @apply absolute  -bottom-6 -right-6 w-[5rem] h-[5rem] -z-[1];
 }
 
-.feature-2-bg{
+.feature-2-bg {
   @apply relative;
 }
-.feature-2-bg::before{
-  content: '';
+.feature-2-bg::before {
+  content: "";
   background: url("https://unfluke.in/static/media/dot2.8fbdbfb9.svg");
   @apply absolute -top-6 -right-6 w-[5rem] h-[5rem] -z-[1];
 }
 
-.feature-2-bg::after{
-  content: '';
+.feature-2-bg::after {
+  content: "";
   background: url("https://unfluke.in/static/media/dot5.0fabd35a.svg");
   @apply absolute  -bottom-6 -left-6 w-[5rem] h-[5rem] -z-[1];
 }
 
-.cover-img{
+.cover-img {
   @apply w-full h-full object-center object-cover;
 }
-
 
 .wrapper {
   @apply relative h-screen overflow-y-auto overflow-x-hidden no-scrollbar;
@@ -232,7 +232,31 @@ button {
   transform: translateZ(-5px) scale(1.5);
 }
 
-.display-grid{
+.display-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.displayLeaderBoard {
+  grid-template-columns: minmax(500px, auto) minmax(auto, 400px);
+}
+
+.banner {
+  @apply p-4 md:p-6 w-fit max-w-[200px] text-white rounded-xl shadow-sm shadow-inherit text-4xl;
+}
+
+.banner-orange {
+  @apply banner bg-gradient-to-r from-[#fc5550] to-[#f9456a];
+}
+
+.banner-dark {
+  @apply banner bg-gradient-to-r from-[#3a4060]/90 to-[#3d4060];
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  @apply sm:hidden h-1 w-1 transition-all;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-black/10;
 }
