@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const Page = () => {
   type LeaderBoardType = {
-    avatar: string,
+    avatar: string;
     rank?: number;
     name: string;
     calmar_ratio: number;
@@ -16,7 +16,8 @@ const Page = () => {
   const lL: LeaderBoardType[] = [
     {
       rank: 1,
-      avatar: "https://img.freepik.com/free-photo/portrait-male-tourist-visiting-great-wall-china_23-2151261863.jpg?t=st=1716817300~exp=1716820900~hmac=325b84672ff8c3c9a7386c9cc755477849ca14fab5567238327743663d0c155e&w=1060",
+      avatar:
+        "https://img.freepik.com/free-photo/portrait-male-tourist-visiting-great-wall-china_23-2151261863.jpg?t=st=1716817300~exp=1716820900~hmac=325b84672ff8c3c9a7386c9cc755477849ca14fab5567238327743663d0c155e&w=1060",
       name: "Selling with re entr",
       calmar_ratio: 3.96,
       overall_profit_percent: 381845,
@@ -26,7 +27,8 @@ const Page = () => {
     },
     {
       rank: 2,
-      avatar: "https://img.freepik.com/free-photo/portrait-female-tourist-visiting-great-wall-china_23-2151261823.jpg?t=st=1716814889~exp=1716818489~hmac=e4d68f7896cc808e2f0b8db3db3aeb931cba9208c4ff4490e1d3f9a88b3cd004&w=360",
+      avatar:
+        "https://img.freepik.com/free-photo/portrait-female-tourist-visiting-great-wall-china_23-2151261823.jpg?t=st=1716814889~exp=1716818489~hmac=e4d68f7896cc808e2f0b8db3db3aeb931cba9208c4ff4490e1d3f9a88b3cd004&w=360",
       name: "strategy_ name",
       calmar_ratio: 3.62,
       overall_profit_percent: 268872.5,
@@ -36,7 +38,8 @@ const Page = () => {
     },
     {
       rank: 3,
-      avatar: "https://img.freepik.com/free-photo/portrait-man-smiling-city_23-2150771187.jpg?t=st=1716817449~exp=1716821049~hmac=bd22f352a431b86c21ee68c559c227972aa56363f14a33153af66c06ec0bcc24&w=360",
+      avatar:
+        "https://img.freepik.com/free-photo/portrait-man-smiling-city_23-2150771187.jpg?t=st=1716817449~exp=1716821049~hmac=bd22f352a431b86c21ee68c559c227972aa56363f14a33153af66c06ec0bcc24&w=360",
       name: "Based on premium and",
       calmar_ratio: 3.42,
       overall_profit_percent: 255425,
@@ -46,7 +49,8 @@ const Page = () => {
     },
     {
       rank: 4,
-      avatar: "https://img.freepik.com/free-photo/portrait-asian-man-smiling_23-2150771025.jpg?t=st=1716817479~exp=1716821079~hmac=60a0dabdbc485d857fe819823b2312246e8439e087fd504d4f166a2421027c39&w=360",
+      avatar:
+        "https://img.freepik.com/free-photo/portrait-asian-man-smiling_23-2150771025.jpg?t=st=1716817479~exp=1716821079~hmac=60a0dabdbc485d857fe819823b2312246e8439e087fd504d4f166a2421027c39&w=360",
       name: "strategy_name",
       calmar_ratio: 3.22,
       overall_profit_percent: 370845,
@@ -56,7 +60,8 @@ const Page = () => {
     },
     {
       rank: 5,
-      avatar: "https://img.freepik.com/free-photo/portrait-man-hugging-dog_23-2150771027.jpg?t=st=1716817493~exp=1716821093~hmac=456feaae3c2598e125dffff1aa1bae83401fc8f0e986f0a8a12e4a4b25ecd606&w=360",
+      avatar:
+        "https://img.freepik.com/free-photo/portrait-man-hugging-dog_23-2150771027.jpg?t=st=1716817493~exp=1716821093~hmac=456feaae3c2598e125dffff1aa1bae83401fc8f0e986f0a8a12e4a4b25ecd606&w=360",
       name: "strategy name",
       calmar_ratio: 3.42,
       overall_profit_percent: 115910,
@@ -66,7 +71,8 @@ const Page = () => {
     },
     {
       rank: 6,
-      avatar: "https://img.freepik.com/free-photo/portrait-man-smiling-top-building_23-2150771059.jpg?t=st=1716817514~exp=1716821114~hmac=2a402c17da9626a9a1b37fc04368289a0542914101422cf2cc3c7a933f1f632a&w=1380",
+      avatar:
+        "https://img.freepik.com/free-photo/portrait-man-smiling-top-building_23-2150771059.jpg?t=st=1716817514~exp=1716821114~hmac=2a402c17da9626a9a1b37fc04368289a0542914101422cf2cc3c7a933f1f632a&w=1380",
       name: "Based on premium and",
       calmar_ratio: 3.42,
       overall_profit_percent: 255425,
@@ -102,12 +108,12 @@ const Page = () => {
   const [selectedRow, setSelectedRow] = useState(0);
 
   useEffect(() => {
-      window.onkeydown = (ev) => {
-        if (ev.key == "Escape") {
-          setSelectedRow(-1);
-        }
-      };
-  })
+    window.onkeydown = (ev) => {
+      if (ev.key == "Escape") {
+        setSelectedRow(-1);
+      }
+    };
+  });
 
   const totalResults = leaderList?.length;
   const perPage = 10;
@@ -122,7 +128,7 @@ const Page = () => {
       <div className="displayLeaderBoard gap-4 flex flex-col-reverse md:flex-row min-h-[500px]">
         <section className="border rounded-xl relative w-full max-h-[800px] overflow-scroll custom-scrollbar">
           <table
-            className="w-full h-full"
+            className="w-full"
             aria-rowcount={perPage}
             aria-colcount={8}
           >
@@ -135,7 +141,7 @@ const Page = () => {
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className="h-fit">
               {leaderList
                 .slice((currentPage - 1) * perPage, currentPage * perPage)
                 .map((lL, i) => (
@@ -208,16 +214,15 @@ const Page = () => {
             <i className="fi fi-sr-cross-circle" />
           </button>
 
-          {
-            selectedRow != -1 &&
-          <div className="w-[120px] h-[120px] overflow-hidden rounded-full">
-            <img
-              src={leaderList[selectedRow].avatar}
-              alt="user-avatar"
-              className="cover-img"
+          {selectedRow != -1 && (
+            <div className="w-[120px] h-[120px] overflow-hidden rounded-full">
+              <img
+                src={leaderList[selectedRow].avatar}
+                alt="user-avatar"
+                className="cover-img"
               />
-          </div>
-            }
+            </div>
+          )}
 
           {selectedRow != -1 && (
             <h2 className="text-xl font-medium text-center">
