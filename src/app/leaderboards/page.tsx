@@ -121,17 +121,13 @@ const Page = () => {
   const totalPages = Math.ceil(totalResults / perPage) || 1;
 
   return (
-    <section className="text-center space-y-4 py-6 px-8">
+    <section className="text-center space-y-4 px-4 py-6 md:px-8">
       <h1 className="tracking-wide font-semibold text-3xl sm:text-4xl md:text-5xl">
         LeaderBoards
       </h1>
       <div className="displayLeaderBoard gap-4 flex flex-col-reverse md:flex-row min-h-[500px]">
-        <section className="border rounded-xl relative w-full max-h-[800px] overflow-scroll custom-scrollbar">
-          <table
-            className="w-full"
-            aria-rowcount={perPage}
-            aria-colcount={8}
-          >
+        <section className="border rounded-xl relative w-full max-h-fit overflow-scroll custom-scrollbar">
+          <table className="w-full" aria-rowcount={perPage} aria-colcount={8}>
             <thead>
               <tr className="border-b">
                 {leaderHeading.map((lH, i) => (
@@ -231,7 +227,7 @@ const Page = () => {
             </h2>
           )}
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap justify-center items-center gap-2">
             <div className="banner-orange flex flex-col text-nowrap">
               <span>
                 {selectedRow != -1 &&

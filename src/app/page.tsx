@@ -10,17 +10,11 @@ import Layout from "@/components/layout/Layout";
 
 const Page = () => {
   return (
-    // <main className="max-h-[73vh] no-scrollbar overflow-y-scroll snap-mandatory snap-y transition-all">
     <main className="transition-all">
-      {/* <div className="h-[73vh] snap-start"> */}
       <Layout>
-
         <Hero />
-      {/* </div> */}
-      {/* <div className="h-[73vh]"> */}
         <Features />
         <Bottom />
-      {/* </div> */}
       </Layout>
     </main>
   );
